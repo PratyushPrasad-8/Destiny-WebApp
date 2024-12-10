@@ -70,11 +70,6 @@ module.exports.addInterest=async(req,res)=>{
 };
 
 module.exports.searchIndex= async(req,res)=>{
-    // const searchTerm = req.query.search;
-    // const regex = new RegExp(`^${searchTerm}`, "i");
-    // const results = await Listing.find({ title: regex });
-    // console.log(results);
-    // res.render("Listings/index.ejs",{results});
     let allData = await Listing.find({title:req.query.search});
     res.render("Listings/index.ejs",{allData});
 };

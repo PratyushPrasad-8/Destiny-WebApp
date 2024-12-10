@@ -10,7 +10,7 @@ const mongoose = require("mongoose");
 const path = require("path");
 const methodoverride=require("method-override");
 const ejsMate = require("ejs-mate");
-const MyError = require("../Destiny/utils/MyError.js");
+
 const listingRouter=require("./Routes/listing.js");
 const reviewRouter=require("./Routes/review.js");
 const userRouter=require("./Routes/User.js");
