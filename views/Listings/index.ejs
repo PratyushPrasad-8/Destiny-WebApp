@@ -1,0 +1,42 @@
+<% layout("Layouts/boilerplate.ejs") -%>
+<link rel="stylesheet" href="/CSS/index.css">
+
+<datalist id="datalistOptions">
+    <% for (data of allData){ %>
+    <option value="<%= data.title %>">
+    <% } %>
+</datalist>
+
+<body>
+    <div class="allDestiny">
+        <% if(allData.length == 0){ %>
+            <img class="nothing-to-display" src="https://cdn.dribbble.com/users/2382015/screenshots/6065978/media/8b4662f8023e4e2295f865106b5d3aa7.gif" alt="Empty">
+        <% } %>
+        <% for (data of allData){ %>
+            <div class="card">
+                <a href="/listings/<%= data._id %>">
+                    <img src="<%= data.image.url %>" class="card-img-top" alt="Destiny">
+                    
+                    <div class="card-body">
+                        <h5 class="card-title"><%= data.title %></h5>
+                        <p class="card-text"><%= data.description %></p>
+                    </div>
+                </a>
+                <div class="card-bottom">
+                    <p> &#8377 <%= data.price.toLocaleString("en-In") %> /night  
+                        <% if(data.like) { %>
+                            <a href="/listings/like/<%= data._id %>"><i class="fa-solid fa-heart"></i></a>
+                        <% } else { %>
+                            <a href="/listings/like/<%= data._id %>"><i class="fa-regular fa-heart"></i></a>
+                        <% } %>
+                        <% if(data.interest) { %>
+                            <a href="/listings/interest/<%= data._id %>"><i class="fa-solid fa-calendar"></i></a>
+                        <% } else { %>
+                            <a href="/listings/interest/<%= data._id %>"><i class="fa-regular fa-calendar"></i></a>
+                        <% } %>
+                    </p>
+                </div>
+            </div>
+        <% } %>
+    </div>
+</body>

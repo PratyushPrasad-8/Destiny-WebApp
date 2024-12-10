@@ -1,0 +1,57 @@
+<% layout("Layouts/boilerplate.ejs") -%>
+<body>
+    <form class="row g-3 needs-validation" method="post" action="/listings/<%= data._id%>?_method=PUT" enctype="multipart/form-data" novalidate>
+        <!-- <div class="col-md-7">
+            <label for="url" class="form-label">Image URL</label>
+            <input value="<%= data.image.url %>" name="url" type="text" class="form-control" id="url"  oninput="this.nextElementSibling.src = this.value">
+            <img class="form-live-image" src="<%= data.image.url %>">
+        </div> -->
+
+        <div class="col-md-7">
+          <label for="image" class="form-label"> Upload Image</label>
+          <input type="file" id="image" name="image" class="form-control">
+          <img class="form-live-image"  src="<%= data.image.url %>">
+      </div>
+
+        <div class="col-md-7">
+            <label for="title" class="form-label">Title</label>
+            <input value="<%= data.title %>" name="title" type="text" class="form-control" id="title" placeholder="Goa" required>
+            <div class="invalid-feedback">
+              Please provide a valid Title.
+            </div>
+        </div>
+
+        <div class="col-md-10">
+          <label for="inputAddress" class="form-label">Description</label>
+          <textarea name="description" class="form-control" id="inputAddress" placeholder="Best place to visit for centuries....500 maximum characters" required minlength="10" maxlength="500"> <%= data.title %> </textarea>
+          <div class="invalid-feedback">
+            Min:10 and Max:500 characetrs.
+          </div>
+        </div>
+
+        <div class="col-md-7">
+            <label for="price" class="form-label">Price</label>
+            <input value="<%= data.price %>" name="price" type="number" class="form-control" id="price" placeholder="5,000 (in Rupees)" required min="0">
+            <div class="invalid-feedback">
+              Please provide a valid Price.
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <label for="location" class="form-label">Location</label>
+            <input value="<%= data.location %>" name="location" type="text" class="form-control" id="location" placeholder="Western Coast of India">
+        </div>
+
+        <div class="col-md-4">
+          <label for="country" class="form-label">Country</label>
+          <select name="country" class="form-control" placeholder="India">
+            <option selected><%= data.country %></option>
+            <option>West Bengal</option>
+          </select>
+        </div>
+
+        <div class="col-12">
+          <button type="submit" class="btn btn-outline-primary">Update</button>
+        </div>
+    </form>
+</body>

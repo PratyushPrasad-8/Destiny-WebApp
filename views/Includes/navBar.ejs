@@ -1,0 +1,35 @@
+<link rel="stylesheet" href="/CSS/navbar.css">
+
+<nav class="navbar navbar-expand-lg navbar-expand-md navbar-light sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/home">Destiny</a>
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav ms-3">
+        <a class="nav-link" href="/listings"><i class="fa-solid fa-house"></i><div class="nav-link-text">Home</div></a>
+        <a class="nav-link" href="/listings/new"><i class="fa-solid fa-plus"></i><div class="nav-link-text">Add</div></a>
+        <a class="nav-link" href="/listings/like" aria-disabled="true"><i class="fa-solid fa-heart"></i><div class="nav-link-text">Whishlist</div></a>
+        <a class="nav-link" href="/listings/interest" aria-disabled="true"><i class="fa-solid fa-calendar-check"></i><div class="nav-link-text">Interests</div></a>
+      </div>
+      <div class="nav-search">
+        <form class="form-inline" method="get" action="/listings/search">
+          <input class="form-control" name="search" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
+          <button class="btn btn-dark btn-sm" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+      </div>
+      <div class="navbar-nav ms-auto">
+        <% if(typeof(currUser) == "undefined"){ %>
+        <a class="nav-link" href="/user/signup"><i class="fa-solid fa-user-plus"></i><div class="nav-link-text">Signup</div></a>
+        <a class="nav-link" href="/user/login"><i class="fa-solid fa-right-to-bracket"></i><div class="nav-link-text">Login</div></a>
+        <% }else{ %>
+        <a class="nav-link" href="/user/logout"><i class="fa-solid fa-right-from-bracket"></i><div class="nav-link-text">Logout</div></a>
+        <% } %>
+      </div>
+    </div>
+  </div>
+</nav>
+

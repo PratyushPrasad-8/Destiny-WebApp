@@ -1,0 +1,14 @@
+.home-img{
+    background-color: black;
+    height: 35rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem;
+}
+
+img{
+    height: 30rem;
+    border-radius: 50%;
+}

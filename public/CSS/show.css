@@ -1,0 +1,48 @@
+.show{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+}
+
+.show-user{
+    font-style: italic;
+    border-bottom: solid black 0.1rem;
+}
+
+.show-email{
+    font-style: oblique;
+}
+
+.show-img{
+    height: 20rem;
+    border-radius: 0.5rem;
+    margin-bottom: 4.7rem;
+}
+
+.show-img:hover{
+    transform: scale(1.5);
+    transition: transform 1s ease-in-out 0.5s;
+}
+
+.show-title{
+    border-bottom: solid black 0.1rem;
+}
+
+.show-details{
+    display: flex;
+    flex-direction: column;
+}
+
+.show-buttons{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.show-buttons button{
+    width: 10rem;
+    height: 2.5rem;
+}

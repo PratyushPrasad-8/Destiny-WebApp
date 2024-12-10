@@ -1,0 +1,54 @@
+.review{
+    margin: 10rem;
+}
+.review-body-submit{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.review-title{
+    border-bottom: solid black 0.1rem;
+}
+
+.review-body-all{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-review{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+    width: 20rem;
+    height: 20rem;
+    margin: 1rem;
+    border-radius: 1rem;
+    padding: 1rem;
+    border: solid black 0.01rem;
+    background-color: rgb(245,245,245);
+}
+
+.card-review-body{
+    margin-top: 1rem;
+    max-width: 15rem;
+    max-height: 15rem;
+}
+
+.card-review-text {
+    text-align: center;
+    font-style: oblique;
+    height: 6rem;
+    width:15rem
+}
+
+.card-review-footer{
+    border-top: solid black 0.1rem;
+    margin-bottom: 10rem;
+}
+
+

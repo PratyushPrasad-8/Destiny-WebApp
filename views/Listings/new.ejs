@@ -1,0 +1,64 @@
+<% layout("Layouts/boilerplate.ejs") -%>
+<body>    
+    <form class="row g-3 needs-validation" action="/listings" method="post" enctype="multipart/form-data" novalidate>
+        <h3>Add new Destiny</h3>
+        
+        <!-- <div class="col-md-7">
+            <label for="url" class="form-label">Image URL</label>  
+            <input name="url" type="text" class="form-control" id="url" placeholder="https://upload.wikimedia.org/wikipedia/commons/d/d1/Image_not_available.png" oninput="this.nextElementSibling.src = this.value">
+            <img class="form-live-image" src="https://upload.wikimedia.org/wikipedia/commons/d/d1/Image_not_available.png">
+        </div> -->
+
+        <div class="col-md-7">
+            <label for="image" class="form-label"> Upload Image</label>
+            <input type="file" id="image" name="image" class="form-control" required>
+            <div class="invalid-feedback">
+              Uploading image is compulsory.
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <label for="title" class="form-label">Title</label>
+            <input name="title" type="text" class="form-control" id="title" placeholder="Goa" required>
+            <div class="invalid-feedback">
+              Please provide a valid Title.
+            </div>
+        </div>
+
+        <div class="col-md-10">
+          <label for="inputAddress" class="form-label">Description</label>
+          <textarea name="description" class="form-control" id="inputAddress" placeholder="Best place to visit for centuries....500 maximum characters" required minlength="10" maxlength="500"></textarea>
+          <div class="invalid-feedback">
+            Min:10 and Max:500 characters.
+          </div>
+        </div>
+
+        <div class="col-md-7">
+            <label for="price" class="form-label">Price</label>
+            <input name="price" type="number" class="form-control" id="price" placeholder="5,000 (in Rupees)" required min="0">
+            <div class="invalid-feedback">
+              Please provide a valid Price.
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <label for="location" class="form-label">Location</label>
+            <input name="location" type="text" class="form-control" id="location" placeholder="Western Coast of India">
+        </div>
+
+        <div class="col-md-4">
+          <label for="country" class="form-label">Country</label>
+          <select name="country" class="form-control" placeholder="India">
+            <option selected>India</option>
+            <option>USA</option>
+            <option>Dubai</option>
+            <option>Cannada</option>
+            <option>Singapore</option>
+          </select>
+        </div>
+
+        <div class="col-12">
+          <button type="submit" class="btn btn-outline-success btn-md">ADD</button>
+        </div>
+      </form>
+</body>

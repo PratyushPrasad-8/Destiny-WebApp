@@ -1,0 +1,11 @@
+.img-not-found{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+.img-not-found img{
+    height: 30rem;
+    border-radius: 1rem;
+    border: solid black 0.1rem;
+}
