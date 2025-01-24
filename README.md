@@ -129,9 +129,5 @@ Contributions are welcome! Please open an issue or submit a pull request for any
 ## 📧 Contact  
 
 For any inquiries or feedback, feel free to reach out:  
-**Email:** your.email@example.com  
-**GitHub:** [your-github-profile](https://github.com/yourusername)  
-
----  
-
-Feel free to adjust the placeholders (e.g., repository link, deployment link, and contact info) with your details!
+**Email:** pratyushprasad108@gmail.com 
+**GitHub:** [My Github Link](https://github.com/PratyushPrasad-8)  
