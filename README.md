@@ -2,6 +2,8 @@
 
 # Full Stack Web Application  
 
+<img src="https://i.giphy.com/pt0JdqtjehpPcwA1uy.webp" height=400>
+
 This is a **Full Stack Web Application** built using **MongoDB**, **Node.js**, **Express**, and **Bootstrap**, following the **MVC (Model-View-Controller)** architecture to ensure maintainable and scalable code. Below, you'll find the key features, technologies used, and setup instructions.  
 
 ## 🌟 Features  
